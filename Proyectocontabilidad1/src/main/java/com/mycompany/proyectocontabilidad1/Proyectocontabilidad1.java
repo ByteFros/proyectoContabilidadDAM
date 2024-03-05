@@ -65,11 +65,28 @@ public class Proyectocontabilidad1 {
 
         int numero;
 
-        System.out.println("ingrese un numero: ");
+        System.out.print("ingrese un numero: ");
 
         numero = input.nextInt();
 
-        System.out.println("el numero ingresado fue" + numero);
+        System.out.println("el numero ingresado fue " + numero);
+        
+        float numeroFloat;
+        
+        System.out.print("Ingresa un numero decimal...");
+        numeroFloat = input.nextFloat();
+        
+        System.out.println("el numero flotante fue " + numeroFloat);
+        
+        String texto;
+        
+        System.out.println("todos impriman un texto");
+        
+        texto = input.next();
+        
+        System.out.println(texto);
+        System.out.println(texto);
+        System.out.println(texto);
 
     }
 }
