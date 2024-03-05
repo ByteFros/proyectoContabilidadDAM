@@ -5,6 +5,7 @@
 package com.mycompany.proyectocontabilidad1;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,35 +59,51 @@ public class Proyectocontabilidad1 {
 //        final long mil = 1000;
 //
 //        System.out.println(mil);
-
-        System.out.println("todos digan socko! ! ! ");
-
-        Scanner input = new Scanner(System.in);
-
-        int numero;
-
-        System.out.print("ingrese un numero: ");
-
-        numero = input.nextInt();
-
-        System.out.println("el numero ingresado fue " + numero);
-        
-        float numeroFloat;
-        
-        System.out.print("Ingresa un numero decimal...");
-        numeroFloat = input.nextFloat();
-        
-        System.out.println("el numero flotante fue " + numeroFloat);
-        
-        String texto;
-        
-        System.out.println("todos impriman un texto");
-        
-        texto = input.next();
-        
-        System.out.println(texto);
-        System.out.println(texto);
-        System.out.println(texto);
+//
+//        System.out.println("todos digan socko! ! ! ");
+//
+//        Scanner input = new Scanner(System.in);
+//
+//        int numero;
+//
+//        System.out.print("ingrese un numero: ");
+//
+//        numero = input.nextInt();
+//
+//        System.out.println("el numero ingresado fue " + numero);
+//        
+//        float numeroFloat;
+//        
+//        System.out.print("Ingresa un numero decimal...");
+//        numeroFloat = input.nextFloat();
+//        
+//        System.out.println("el numero flotante fue " + numeroFloat);
+//        
+//        String texto;
+//        
+//        System.out.println("todos impriman un texto");
+//        
+//        texto = input.nextLine();
+//        
+//        System.out.println(texto);
+//        System.out.println(texto);
+//        System.out.println(texto);
+          
+          String cadena;
+          int entero;
+          String caracter;
+          double decimal;
+          
+          cadena = JOptionPane.showInputDialog("digite una cadena...");
+          
+          System.out.println("Cadena ingresada: "+ cadena);
+          entero = Integer.parseInt(JOptionPane.showInputDialog("ingrese un numero entero"));
+          System.out.println("Numero introducido: "+ entero);
+          caracter = JOptionPane.showInputDialog("Ingrese un caracter: ");
+          
+          caracter[0] = caracter;
+          
+          System.out.println(caracter);
 
     }
 }
