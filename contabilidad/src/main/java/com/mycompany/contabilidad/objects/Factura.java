@@ -11,17 +11,13 @@ public class Factura {
     private String id;
     private Cliente cliente;
     private boolean payed;
-    private double net;
-    private double iva;
-    private double total;
+    private double cost;
 
-    public Factura(String id, Cliente cliente, double net) {
+    public Factura(String id, Cliente cliente, double cost) {
         this.id = id;
         this.cliente = cliente;
-        this.net = net;
-        this.iva = 0.21;
+        this.cost = cost;
         this.payed = false;
-        this.total = net + (net*0.21);
     }
     
     

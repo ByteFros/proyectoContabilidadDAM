@@ -3,10 +3,11 @@ package com.mycompany.contabilidad;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 /**
  *
- * @author mfontana
+ * @author amaia
  */
 public class Interprete {
 
@@ -35,11 +36,21 @@ public class Interprete {
         } while (error);
         return string;
     }
-    
-    public boolean lenComp(String[] argumento, int num) {
-        if (argumento.length == num) {
+        
+    public boolean checkArgs(String[] argumentos, int num) {
+        if (argumentos.length == num) {
+            for (int i = 0; i < argumentos.length; i++){
+                if ("".equals(argumentos[i])) {
+                    System.out.println("Alguno de los campos está vacío, revise el comando.");
+                    return false;
+                }
+            }            
             return true;
         }
-        else {return false;}
+        else {
+            return false;
+        }
     }
+    
+    
 }

@@ -1,9 +1,5 @@
 package com.mycompany.contabilidad;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  *
  * @author amaia
@@ -19,17 +15,23 @@ public class Main {
             if (argumentos.length > 0) {
                 switch (argumentos[0].toLowerCase()) {
                     case "addclient":
-                        if (i.lenComp(argumentos, 7)) {
+                        if (i.checkArgs(argumentos, 7)) {
                             String name = argumentos[1];
-                            
+                            System.out.println(argumentos[2]);
                         }
+                        break;
                     //case "addbill":
                     //case "paybill":
                     //case "pending":
                     //case "payed":
                     //case "anual":
                     //case "help":
-                    //default:
+                    case "quit":
+                        System.out.println("¡Hasta la próxima!");
+                        menu = false;
+                    default:
+                        System.out.println("No se reconoce el comando.");
+                        System.out.println("Utilice el comando 'help' para revisar los comandos disponibles.");
                 }
             }
         } while (menu == true);
