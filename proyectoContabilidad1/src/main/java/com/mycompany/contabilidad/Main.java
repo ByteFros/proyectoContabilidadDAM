@@ -1,5 +1,6 @@
 package com.mycompany.contabilidad;
 
+import com.mycompany.contabilidad.objects.Cliente;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,7 +21,20 @@ public class Main {
                 switch (argumentos[0].toLowerCase()) { // Correct syntax with colon (:)
                     case "addclient":
                         if (i.checkArgs(argumentos, 7)) {
+
                             String name = argumentos[1];
+                            String apellido = argumentos[2];
+                            String direccion = argumentos[3];
+                            String telefono = argumentos[4];
+                            String nif = argumentos[5];
+                            String email = argumentos[6];
+                            if (Interprete.telefono(telefono)) {
+                                if (i.validardni(nif)) {
+                                    Cliente Cliente1 = new Cliente(name, apellido, direccion, telefono, nif, email);
+                                    i.addCliente = Cliente1;
+
+                                }
+                            }
 
                         }
                         break;
