@@ -56,10 +56,4 @@ public class Factura {
     public void paybill(boolean payed) {
         this.payed = true;
     }
-    
-    public double getNet() {
-        double iva = 0.21;
-        double net = bruto + (bruto*iva);
-        return net;
-    }
 }
