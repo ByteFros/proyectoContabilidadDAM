@@ -42,7 +42,14 @@ public class Main {
                     case "addbill":
                         if (i.checkArgs(argumentos, 4)) {
                             String name = argumentos[1];
-
+                            String concepto = argumentos[2];
+                            double importe = argumentos[3];
+                            if (i.validarImporte(importe)) {
+                                if (i.validarCliente(name)) {
+                                    i.addCliente.addFactura(concepto, importe);
+                                }
+                            }
+                            
                         }
 
                         break;

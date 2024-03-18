@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import com.mycompany.contabilidad.objects.Cliente;
-
 /**
  *
  * @author amaia
@@ -14,7 +12,6 @@ import com.mycompany.contabilidad.objects.Cliente;
 public class Interprete {
 
     private BufferedReader br;
-    public Cliente addCliente;
 
     public Interprete() {
         br = new BufferedReader(new InputStreamReader(System.in));
@@ -61,7 +58,7 @@ public class Interprete {
         }
     }
 
-    public static boolean isInt(String string) {
+    public boolean isInt(String string) {
         int num;
         try {
             num = Integer.parseInt(string);
@@ -126,14 +123,12 @@ public class Interprete {
         }
     }
 
-    public static boolean checkTel(String tfno) {
+    public static boolean telefono(String tfno) {
         if (tfno.length() == 9) {
-            if (isInt(tfno)) {
-                return true;
-            }
+            return true;
+        } else {
+            return false;
         }
-        System.out.println("El teléfono introducido no es correcto.");
-        return false;
     }
     
     

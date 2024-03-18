@@ -25,13 +25,12 @@ public class Main {
                             String name = argumentos[1];
                             String apellido = argumentos[2];
                             String direccion = argumentos[3];
-                            String telephone = argumentos[4];
+                            String telefono = argumentos[4];
                             String nif = argumentos[5];
                             String email = argumentos[6];
-                            if (Interprete.checkTel(telephone)) {
-                                int tel = Integer.parseInt(telephone);
-                                if (i.validarDni(nif)) {
-                                    Cliente Cliente1 = new Cliente(name, apellido, direccion, tel, nif, email);
+                            if (Interprete.telefono(telefono)) {
+                                if (i.validardni(nif)) {
+                                    Cliente Cliente1 = new Cliente(name, apellido, direccion, telefono, nif, email);
                                     i.addCliente = Cliente1;
 
                                 }
@@ -42,7 +41,6 @@ public class Main {
                     case "addbill":
                         if (i.checkArgs(argumentos, 4)) {
                             String name = argumentos[1];
-
                         }
 
                         break;
