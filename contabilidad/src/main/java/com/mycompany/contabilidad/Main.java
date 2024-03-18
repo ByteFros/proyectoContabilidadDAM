@@ -17,7 +17,14 @@ public class Main {
                     case "addclient":
                         if (i.checkArgs(argumentos, 7)) {
                             String name = argumentos[1];
-                            System.out.println(argumentos[2]);
+                            
+			    String  apellido=argumentos[2];
+			    String direccion =argumentos[3];
+			    Int telefono=argumentos[4];
+		            String telefono=argumentos[5];
+			    String email=argumentos[6];
+			    //logica para comprobar todos los datos antes de añadir al fichero 
+				//con el metodo que tenemos de validaciones
                         }
                         break;
                     //case "addbill":
