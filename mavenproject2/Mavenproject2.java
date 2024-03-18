@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+ */import java.util.Scanner
 package com.mycompany.Mavenproject2;
 
 /**
@@ -48,10 +48,30 @@ public class Mavenproject2 {
                 
                 }
         
-    
+                public static boolean nombreExiste(String nombreArchivo,String nombreFactura,String NumeroFactura){
+
+                        Scanner scanner= new Scanner(new File(nombreArchivo));
+                        String linea=scanner.nextline();
+                        if(linea.contains(nombreFactura)) and linea.contains(numeroFactura)){
+                            scanner.close();
+                            return True
+                        }
+                    }
+                return false
+
+                }
+            public static convertidorInteger(String datos){
+                int datoConvertido=Integer.parseInt(datos);
+            }
+
+            public static  convertidorDouble(String datos){
+                double datoConvertidoDouble=Double.parseDouble(datos);
+            }
+
+
     }
-        
-        
-                
-    
+
+
+
+
 
