@@ -13,11 +13,17 @@ public class Factura {
     private boolean payed;
     private double cost;
 
-    public Factura(String id, Cliente cliente, double cost) {
+   
+
+    public Factura(String id, Cliente cliente, boolean payed, double cost) {
         this.id = id;
         this.cliente = cliente;
+        this.payed = payed;
         this.cost = cost;
-        this.payed = false;
+    }
+    
+     public Factura(String id, Cliente cliente, double cost) {
+        this(id, cliente, false, cost);
     }
     
     

@@ -14,16 +14,15 @@ import java.util.ArrayList;
  *
  * @author amaia
  */
-
 public class Fichero {
-    
+
     private String folder;
     private String fileClientes;
     private String fileFacturas;
     private String pathClientes;
     private String pathFacturas;
     private File folderFile;
-    
+
     public Fichero() {
         folder = "dades";
         fileClientes = "clientes.txt";
@@ -32,7 +31,7 @@ public class Fichero {
         pathFacturas = folder + File.separator + fileFacturas;
         folderFile = new File(folder);
     }
-    
+
     public void writeCliente(Cliente c) {
         if (!folderFile.exists()) {
             folderFile.mkdir();
@@ -46,7 +45,7 @@ public class Fichero {
             System.out.println(ex.getMessage());
         }
     }
-    
+
     public void writeFactura(Factura f) {
         if (!folderFile.exists()) {
             folderFile.mkdir();
@@ -60,18 +59,16 @@ public class Fichero {
             System.out.println(ex.getMessage());
         }
     }
-    
+
     public ArrayList<Cliente> readClientes() {
         ArrayList<Cliente> clientes = new ArrayList<>();
         if (!folderFile.exists()) {
             return clientes;
-        }
-        else {
+        } else {
             File f = new File(pathClientes);
-            if(!f.exists()) {
+            if (!f.exists()) {
                 return clientes;
-            }
-            else {
+            } else {
                 try {
                     BufferedReader br = new BufferedReader(new FileReader(f));
                     String line;
@@ -86,57 +83,48 @@ public class Fichero {
                         Cliente cliente = new Cliente(name, lastName, address, telephone, nif, email);
                         clientes.add(cliente);
                     }
-                }
-                catch (IOException ex) {
+                } catch (IOException ex) {
                     System.out.println(ex.getMessage());
                 }
                 return clientes;
             }
         }
     }
-    
+
     public ArrayList<Factura> readFacturas() {
         ArrayList<Factura> facturas = new ArrayList<>();
         ArrayList<Cliente> clientes = readClientes();
-        if (!folderFile.exists()) {
-            return facturas;
-        }
-        else {
-            File f = new File(pathFacturas);
-            if(!f.exists()) {
-                return facturas;
-            }
-            else {
-                try {
-                    BufferedReader br = new BufferedReader(new FileReader(f));
-                    String line;
-                    while ((line = br.readLine()) != null) {
-                        String[] datos = line.split("-");
-                        String id = datos[0];
-                        String nifCliente = datos[1];
-                        boolean payed = Boolean.parseBoolean(datos[2]);
-                        double cost = Double.parseDouble(datos[3]);
-                        for (Cliente cliente : clientes) {
-                            if (nifCliente.equals(cliente.getNif())) {
-                                String name = cliente.getName();
-                                String lastName = cliente.getLastname();
-                                String address = cliente.getAddress();
-                                int telephone = cliente.getTelephone();
-                                String nif = cliente.getNif();
-                                String email = cliente.getEmail();                                
-                            }
-                        }
-                        Cliente cl = new Cliente(name, lastName, address, telephone, nif, email);
+        File f = new File(pathFacturas);
+        if (folderFile.exists() && f.exists()) {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(f));
+                String line;
+                while ((line = br.readLine()) != null) {
+                    String[] datos = line.split("-");
+                    String id = datos[0];
+                    String nifCliente = datos[1];
+                    boolean payed = Boolean.parseBoolean(datos[2]);
+                    double cost = Double.parseDouble(datos[3]);
+                    Cliente cl = getClienteByNif(clientes, nifCliente);
+                    if (cl != null) {
                         Factura factura = new Factura(id, cl, payed, cost);
                         facturas.add(factura);
                     }
                 }
-                catch (IOException ex) {
-                    System.out.println(ex.getMessage());
-                }
-                return clientes;
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
             }
         }
+        return facturas;
+    }
+
+    private Cliente getClienteByNif(ArrayList<Cliente> clientes, String nifCliente) {
+        for (Cliente cliente : clientes) {
+            if (nifCliente.equals(cliente.getNif())) {
+                return cliente;
+            }
+        }
+        return null;
     }
 
 }
