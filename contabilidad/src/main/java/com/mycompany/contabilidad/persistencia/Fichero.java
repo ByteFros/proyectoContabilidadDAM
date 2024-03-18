@@ -107,7 +107,7 @@ public class Fichero {
                     double cost = Double.parseDouble(datos[3]);
                     Cliente cl = getClienteByNif(clientes, nifCliente);
                     if (cl != null) {
-                        Factura factura = new Factura(id, cl, payed, cost);
+                        Factura factura = new Factura(id, cl, cost);
                         facturas.add(factura);
                     }
                 }
