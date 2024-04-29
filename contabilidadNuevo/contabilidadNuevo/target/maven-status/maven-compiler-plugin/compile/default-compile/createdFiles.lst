@@ -1,0 +1,4 @@
+com\mycompany\contabilidad\objects\Cliente.class
+com\mycompany\contabilidad\objects\Factura.class
+com\mycompany\contabilidad\Interprete.class
+com\mycompany\contabilidad\Main.class
