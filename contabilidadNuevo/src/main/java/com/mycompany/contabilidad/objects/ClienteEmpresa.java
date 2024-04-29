@@ -8,7 +8,7 @@ public class ClienteEmpresa extends Cliente {
     
     private String nombreEmpresa;
 
-    public ClienteEmpresa(String nombreEmpresa, String subcomercial, String nombreContacto, String id, String address, int telephone, String email) {
+    public ClienteEmpresa(String nombreEmpresa, String subcomercial, String nombreContacto, String id, String address, String telephone, String email) {
         super(subcomercial, nombreContacto, id, address, telephone, email);
         this.nombreEmpresa = nombreEmpresa;
     }

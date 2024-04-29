@@ -8,7 +8,7 @@ public class Cliente extends Usuario {
     
     private String subcomercial;
 
-    public Cliente(String subcomercial, String nombreContacto, String id, String address, int telephone, String email) {
+    public Cliente(String subcomercial, String nombreContacto, String id, String address, String telephone, String email) {
         super(nombreContacto, id, address, telephone, email);
         this.subcomercial = subcomercial;
     }

@@ -11,10 +11,10 @@ public class Usuario {
     private String nombreContacto;
     private String id;
     private String address;
-    private int telephone;
+    private String telephone;
     private String email;
 
-    public Usuario(String nombreContacto, String id, String address, int telephone, String email) {
+    public Usuario(String nombreContacto, String id, String address, String telephone, String email) {
         this.nombreContacto = nombreContacto;
         this.id = id;
         this.address = address;
@@ -46,11 +46,11 @@ public class Usuario {
         this.address = address;
     }
 
-    public int getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(int telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 

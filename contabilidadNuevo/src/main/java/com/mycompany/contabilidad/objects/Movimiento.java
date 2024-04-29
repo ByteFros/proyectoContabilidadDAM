@@ -12,12 +12,12 @@ public class Movimiento {
     
     private String id;
     private Usuario usuario;
-    private double cantidad;
+    private String cantidad;
     private Date fecha;
     private String concepto;
     private String observaciones;
 
-    public Movimiento(String id, Usuario usuario, double cantidad, Date fecha, String concepto, String observaciones) {
+    public Movimiento(String id, Usuario usuario, String cantidad, Date fecha, String concepto, String observaciones) {
         this.id = id;
         this.usuario = usuario;
         this.cantidad = cantidad;
@@ -42,11 +42,11 @@ public class Movimiento {
         this.usuario = usuario;
     }
 
-    public double getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 

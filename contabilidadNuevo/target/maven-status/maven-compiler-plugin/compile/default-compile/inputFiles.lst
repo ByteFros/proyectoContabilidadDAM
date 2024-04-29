@@ -1,4 +1,12 @@
-C:\Users\admin\Documents\NetBeansProjects\contabilidad\src\main\java\com\mycompany\contabilidad\objects\Factura.java
-C:\Users\admin\Documents\NetBeansProjects\contabilidad\src\main\java\com\mycompany\contabilidad\objects\Cliente.java
-C:\Users\admin\Documents\NetBeansProjects\contabilidad\src\main\java\com\mycompany\contabilidad\Interprete.java
-C:\Users\admin\Documents\NetBeansProjects\contabilidad\src\main\java\com\mycompany\contabilidad\Main.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/ClienteEmpresa.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/Usuario.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/exceptions/AppException.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/Movimiento.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/PanelFondo.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycomany/contabilidad/view/Gestor.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/FormularioProveedor.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/Ventana.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/FormularioCliente.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/LibroCuentas.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/Proveedor.java
+/home/alex/NetBeansProjects/contabilidadNuevo/src/main/java/com/mycompany/contabilidad/objects/Cliente.java
