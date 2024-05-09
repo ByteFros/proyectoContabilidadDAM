@@ -142,12 +142,21 @@ public class Gestor {
         }
     }
 
-    public void addMovimiento(String id, Usuario usuario, String cantidad, Date fecha, String concepto, String observaciones) throws AppException {
+    public void addMovimiento(String id, Usuario usuario, double cantidad, Date fecha, String concepto, String observaciones) throws AppException {
         if (!libro.getMovimientos().containsKey(id)) {
             Movimiento movimiento = new Movimiento(id, usuario, cantidad, fecha, concepto, observaciones);
             libro.addMovimiento(movimiento);
         } else {
             throw new AppException(2);
+        }
+    }
+    
+    public Usuario obtenerUsuarioPorNifCif(String nifCif) {
+        if (Usuario.containsKey(nifCif)) {
+            return Usuario.get(nifCif);
+        } else {
+            System.out.println("No se encontró usuario con el NIF/CIF proporcionado.");
+            return null;
         }
     }
 

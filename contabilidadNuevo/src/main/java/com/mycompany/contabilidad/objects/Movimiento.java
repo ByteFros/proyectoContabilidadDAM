@@ -10,15 +10,15 @@ import java.util.Date;
 
 public class Movimiento {
     
-    private String id;
+    private String nifCif;
     private Usuario usuario;
-    private String cantidad;
+    private double cantidad;
     private Date fecha;
     private String concepto;
     private String observaciones;
 
-    public Movimiento(String id, Usuario usuario, String cantidad, Date fecha, String concepto, String observaciones) {
-        this.id = id;
+    public Movimiento(String id, Usuario usuario, double cantidad, Date fecha, String concepto, String observaciones) {
+        this.nifCif = id;
         this.usuario = usuario;
         this.cantidad = cantidad;
         this.fecha = fecha;
@@ -27,11 +27,11 @@ public class Movimiento {
     }
 
     public String getId() {
-        return id;
+        return nifCif;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.nifCif = id;
     }
 
     public Usuario getUsuario() {
@@ -42,11 +42,11 @@ public class Movimiento {
         this.usuario = usuario;
     }
 
-    public String getCantidad() {
+    public double getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
     }
 

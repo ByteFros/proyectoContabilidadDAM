@@ -236,7 +236,8 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MovimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MovimientoActionPerformed
-        // TODO add your handling code here:
+        FormularioMovimientos moviDinerito= new FormularioMovimientos();
+        moviDinerito.setVisible(true);
     }//GEN-LAST:event_MovimientoActionPerformed
 
     private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
