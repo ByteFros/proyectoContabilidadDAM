@@ -149,7 +149,7 @@ public class FormularioMovimientos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String nifCif= jTextField1.getText();
-        Usuario usuarioBusco=Gestor.getInstance().obtenerUsuarioPorNifCif(nifCif);
+        
         
         
         
@@ -159,12 +159,12 @@ public class FormularioMovimientos extends javax.swing.JFrame {
         Date  ahora=new Date();
         SimpleDateFormat formatofecha=new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         
-        try {
-            Gestor.getInstance().addMovimiento(nifCif,usuarioBusco,cantidad,ahora,concepto,observaciones);
-            JOptionPane.showMessageDialog(this, "Se ha añadido correctamente.");
-        } catch (AppException ex) {
-            JOptionPane.showMessageDialog(this, ex.getMessage());
-        }
+        //try {
+          //  Gestor.getInstance().addMovimiento(nifCif,usuarioBusco,cantidad,ahora,concepto,observaciones);
+            //JOptionPane.showMessageDialog(this, "Se ha añadido correctamente.");
+        //} catch (AppException ex) {
+          //  JOptionPane.showMessageDialog(this, ex.getMessage());
+        //}
                 
     }//GEN-LAST:event_jButton1ActionPerformed
 

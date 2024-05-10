@@ -151,13 +151,5 @@ public class Gestor {
         }
     }
     
-    public Usuario obtenerUsuarioPorNifCif(String nifCif) {
-        if (Usuario.containsKey(nifCif)) {
-            return Usuario.get(nifCif);
-        } else {
-            System.out.println("No se encontró usuario con el NIF/CIF proporcionado.");
-            return null;
-        }
-    }
-
+   
 }
