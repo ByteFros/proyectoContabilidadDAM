@@ -14,9 +14,12 @@ FormularioCliente$4.class
 Ventana$2.class
 Ventana.class
 FormularioMovimientos$3.class
+FormularioBorrarMovimientos$1.class
+Ventana$5.class
 com\mycompany\contabilidad\objects\ClienteEmpresa.class
 FormularioProveedor$2.class
 Ventana$3.class
+FormularioBorrarMovimientos.class
 Ventana$1.class
 FormularioCliente.class
 com\mycomany\contabilidad\view\Gestor.class
@@ -25,3 +28,4 @@ FormularioCliente$3.class
 FormularioProveedor.class
 com\mycompany\contabilidad\objects\Usuario.class
 FormularioMovimientos.class
+Ventana$6.class

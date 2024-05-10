@@ -9,6 +9,7 @@ import com.mycompany.contabilidad.objects.Proveedor;
 import com.mycompany.contabilidad.objects.Usuario;
 import java.util.Date;
 import java.util.HashMap;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -151,5 +152,14 @@ public class Gestor {
         }
     }
     
+    public double obtenersaldo(){
+        return libro.getTotalMoney();
+    }
+    
+    public void verSaldo(){
+        double Saldo=obtenersaldo();
+        JOptionPane.showMessageDialog(null, "El saldo total de la empresa es:"+Saldo+" €" , "Saldo", JOptionPane.INFORMATION_MESSAGE);
+
+    }
    
 }

@@ -37,6 +37,12 @@
         </DimensionLayout>
       </Layout>
     </Container>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenu1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -197,10 +203,8 @@
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="Saldo" pref="496" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Cliente" max="32767" attributes="0"/>
-                                      <Component id="Proveedor" pref="496" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="Cliente" max="32767" attributes="0"/>
+                                  <Component id="Proveedor" pref="496" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="142" max="32767" attributes="0"/>
                           </Group>
@@ -252,6 +256,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Mostrar Saldo"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaldoActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -267,6 +274,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar Movimiento"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BorrarMoviActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

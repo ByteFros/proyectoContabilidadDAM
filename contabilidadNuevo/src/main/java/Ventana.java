@@ -49,6 +49,7 @@ public class Ventana extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jDialog1 = new javax.swing.JDialog();
         jDialog2 = new javax.swing.JDialog();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel2 = new javax.swing.JPanel();
@@ -112,6 +113,11 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         Saldo.setText("Mostrar Saldo");
+        Saldo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaldoActionPerformed(evt);
+            }
+        });
 
         jLayeredPane2.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(Cliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -128,9 +134,8 @@ public class Ventana extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Saldo, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
-                    .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)))
+                    .addComponent(Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE))
                 .addContainerGap(142, Short.MAX_VALUE))
         );
         jLayeredPane2Layout.setVerticalGroup(
@@ -159,6 +164,11 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         BorrarMovi.setText("Borrar Movimiento");
+        BorrarMovi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BorrarMoviActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -253,6 +263,15 @@ public class Ventana extends javax.swing.JFrame {
         detallesProveedor.setVisible(true);
     }//GEN-LAST:event_ProveedorActionPerformed
 
+    private void SaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaldoActionPerformed
+        Gestor.getInstance().verSaldo();
+    }//GEN-LAST:event_SaldoActionPerformed
+
+    private void BorrarMoviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarMoviActionPerformed
+        FormularioBorrarMovimientos movi=new FormularioBorrarMovimientos();
+        movi.setVisible(true);
+    }//GEN-LAST:event_BorrarMoviActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -302,5 +321,6 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }
