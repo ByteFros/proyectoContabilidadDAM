@@ -1,2 +1,0 @@
-# proyectoContabilidadDAM
-cosas del proyecto
